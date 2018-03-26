@@ -1,0 +1,43 @@
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\concrt140.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\cvextern.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\opencv_ffmpeg330_64.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\vcruntime140.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.exe.config
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.exe
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.pdb
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.DebuggerVisualizers.VS2012.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.DebuggerVisualizers.VS2013.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.DebuggerVisualizers.VS2015.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.DebuggerVisualizers.VS2017.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.UI.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.UI.GL.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.World.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\ZedGraph.dll
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.UI.xml
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.UI.GL.xml
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Emgu.CV.World.xml
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.exe.config
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.Form1.resources
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.Properties.Resources.resources
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csproj.GenerateResource.Cache
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csproj.CoreCompileInputs.cache
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.exe
+C:\Users\TOSHIBA\Desktop\Studia\Semestr 4\ZGU\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.pdb
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\concrt140.dll
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\cvextern.dll
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\opencv_ffmpeg330_64.dll
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\vcruntime140.dll
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.exe.config
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.exe
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\WykrywaczZnakow.pdb
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csprojResolveAssemblyReference.cache
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.exe.config
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.Form1.resources
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.Properties.Resources.resources
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csproj.GenerateResource.cache
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csproj.CoreCompileInputs.cache
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.csproj.CopyComplete
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.exe
+C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\WykrywaczZnakow\WykrywaczZnakow\obj\Release\WykrywaczZnakow.pdb
