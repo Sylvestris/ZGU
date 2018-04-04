@@ -86,6 +86,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\WykrywaczZnakow.exe.config" />
+    <None Include="bin\Release\WykrywaczZnakow.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +102,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\concrt140.dll" />
+    <Content Include="bin\Debug\cvextern.dll" />
+    <Content Include="bin\Debug\Emgu.CV.DebuggerVisualizers.VS2012.dll" />
+    <Content Include="bin\Debug\Emgu.CV.DebuggerVisualizers.VS2013.dll" />
+    <Content Include="bin\Debug\Emgu.CV.DebuggerVisualizers.VS2015.dll" />
+    <Content Include="bin\Debug\Emgu.CV.DebuggerVisualizers.VS2017.dll" />
+    <Content Include="bin\Debug\Emgu.CV.UI.dll" />
+    <Content Include="bin\Debug\Emgu.CV.UI.GL.dll" />
+    <Content Include="bin\Debug\Emgu.CV.UI.GL.xml" />
+    <Content Include="bin\Debug\Emgu.CV.UI.xml" />
+    <Content Include="bin\Debug\Emgu.CV.World.dll" />
+    <Content Include="bin\Debug\Emgu.CV.World.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll" />
+    <Content Include="bin\Debug\opencv_ffmpeg330_64.dll" />
+    <Content Include="bin\Debug\vcruntime140.dll" />
+    <Content Include="bin\Debug\WykrywaczZnakow.exe" />
+    <Content Include="bin\Debug\WykrywaczZnakow.pdb" />
+    <Content Include="bin\Debug\ZedGraph.dll" />
+    <Content Include="bin\Release\concrt140.dll" />
+    <Content Include="bin\Release\cvextern.dll" />
+    <Content Include="bin\Release\Emgu.CV.DebuggerVisualizers.VS2012.dll" />
+    <Content Include="bin\Release\Emgu.CV.DebuggerVisualizers.VS2013.dll" />
+    <Content Include="bin\Release\Emgu.CV.DebuggerVisualizers.VS2015.dll" />
+    <Content Include="bin\Release\Emgu.CV.DebuggerVisualizers.VS2017.dll" />
+    <Content Include="bin\Release\Emgu.CV.UI.dll" />
+    <Content Include="bin\Release\Emgu.CV.UI.GL.dll" />
+    <Content Include="bin\Release\Emgu.CV.World.dll" />
+    <Content Include="bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.dll" />
+    <Content Include="bin\Release\opencv_ffmpeg330_64.dll" />
+    <Content Include="bin\Release\vcruntime140.dll" />
+    <Content Include="bin\Release\WykrywaczZnakow.exe" />
+    <Content Include="bin\Release\WykrywaczZnakow.pdb" />
     <Content Include="concrt140.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -112,6 +146,10 @@
     <Content Include="vcruntime140.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\znaki\" />
+    <Folder Include="bin\Release\znaki\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

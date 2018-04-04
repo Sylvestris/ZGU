@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Emgu.CV;
@@ -68,13 +66,19 @@ namespace WykrywaczZnakow
             progressBar2.Value = 0;
         }
         /// <summary>
-        /// 
+        /// Wybór zdjęcia
         /// </summary>
-        /// <param name="rodzaj_zdjecia"></param>
+        /// <param name="rodzaj_zdjecia"> Rodzaj zdjęcia</param>
+        /// <returns>Zdjęcie znaku</returns>
         private void ustawWykrytyZnak(int rodzaj_zdjecia)
         {
+            string sciezka = Directory.GetCurrentDirectory();
+            string znaki = @"\znaki\";
+            string znakD1 = "d1_2.png";
+            string znakA7 = "Znak_A-7.jpg";
+
             String nazwa = "";
-            Image newImage = Image.FromFile(@"C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\img\d1_2.png");
+            Image newImage = Image.FromFile(sciezka + znaki + znakD1);
             const int staly_mnoznik_x = 125;
 
             if (rodzaj_zdjecia == 1 && !isZnak_1)
@@ -83,7 +87,7 @@ namespace WykrywaczZnakow
                 licznik_wykrytych_znakow++;
 
                 nazwa = "D-1";
-                newImage = Image.FromFile(@"C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\img\d1_2.png");
+                newImage = Image.FromFile(sciezka + znaki + znakD1);
                 isZnak_1 = true;
             }
 
@@ -93,7 +97,7 @@ namespace WykrywaczZnakow
                 licznik_wykrytych_znakow++;
 
                 nazwa = "A-7";
-                newImage = Image.FromFile(@"C:\Users\Sylwek\Desktop\Informatyka\IV\Zaawansowana Grafika Użytkowa\ZGU - projekt zaliczeniowy\img\Znak_A-7.jpg");
+                newImage = Image.FromFile(sciezka + znaki + znakA7);
                 isZnak_2 = true;
             }
 
