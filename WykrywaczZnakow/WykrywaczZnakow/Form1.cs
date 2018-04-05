@@ -14,30 +14,49 @@ namespace WykrywaczZnakow
 {
     public partial class Form1 : Form
     {
+		
         Image<Bgr, byte> imgInput;
         Image<Bgr, byte> imgSmooth;
-        List<PictureBox> wykryteZnaki = new List<PictureBox>();
+        
 
+		//zmienna wskazująca pozycje X wykrytego znaku
         int pozycja_wykrytegoZnaku_x = 1114;
+	
         int licznik_wykrytych_znakow = 0;
+		
+		//lista wykrytych znaków
+		List<PictureBox> wykryteZnaki = new List<PictureBox>();
+		
+		//zmienne wskazujące czy znak został wykryty
         bool isZnak_1 = false;
         bool isZnak_2 = false;
 
         public Form1()
         {
             InitializeComponent();
+			
+			//ustalenie rozmiaru okna
             this.Size = new Size(484, 442);
+			
+			//ustalenie wartości max progressbar'a
             progressBar2.Maximum = 10;
 
         }
 
+		/*
+		Funkcja zerująca program. Pozwala na wczytanie kolejnego obrazu do przetworzenia
+		*/
         public void wyczysc_program()
         {
+			//czyszczenie pictureBox
             zdjecieGlowneBox.Image = null;
             zdjecieCannyBox.Image = null;
             zdjecieWykrytyZnak.Image = null;
             pictureBox2.Image = null;
+			
             this.Size = new Size(484, 442);
+			
+			//funkcja resetująca progressBar
             resetujProgressBar();
 
             //resetowanie tablicy wykrytych znakow
@@ -47,6 +66,8 @@ namespace WykrywaczZnakow
                 this.Controls.Remove(znak);
                 
             }
+			
+			//czyszczenie tablicy wykrytych znakow
             wykryteZnaki.Clear();
 
             licznik_wykrytych_znakow = 0;
@@ -56,6 +77,9 @@ namespace WykrywaczZnakow
             label1.Text = "";
         }
 
+		/*
+		Funkcja zwiekszająca progressBar o podaną ilość
+		*/
         private void zwiekszProgressBar(int liczba)
         {
             progressBar2.Increment(liczba);
@@ -70,6 +94,10 @@ namespace WykrywaczZnakow
         /// </summary>
         /// <param name="rodzaj_zdjecia"> Rodzaj zdjęcia</param>
         /// <returns>Zdjęcie znaku</returns>
+		
+		/*
+		Funkcja ustawiająca zdj wykrytego znaku
+		*/
         private void ustawWykrytyZnak(int rodzaj_zdjecia)
         {
             string sciezka = Directory.GetCurrentDirectory();
@@ -79,8 +107,11 @@ namespace WykrywaczZnakow
 
             String nazwa = "";
             Image newImage = Image.FromFile(sciezka + znaki + znakD1);
+			
+			//przesuniecie kloejnego wykrytego znaku o stala wartosc X
             const int staly_mnoznik_x = 125;
 
+			//ustawienie znaku D-1
             if (rodzaj_zdjecia == 1 && !isZnak_1)
             {
                 pozycja_wykrytegoZnaku_x = pozycja_wykrytegoZnaku_x - (staly_mnoznik_x * licznik_wykrytych_znakow);
@@ -91,6 +122,7 @@ namespace WykrywaczZnakow
                 isZnak_1 = true;
             }
 
+			//ustawienie znaku A-7
             if (rodzaj_zdjecia == 2 && !isZnak_2)
             {
                 pozycja_wykrytegoZnaku_x = pozycja_wykrytegoZnaku_x - (staly_mnoznik_x * licznik_wykrytych_znakow);
@@ -101,9 +133,11 @@ namespace WykrywaczZnakow
                 isZnak_2 = true;
             }
 
+			//zakoncz jesli nie przypisano nazwy znaku = znak zostal juz wykryty i pokazany
             if (nazwa == "")
                 return;
 
+			//ustawinie wybranego zdjecia i dodanie do tablicy wykrytych znakow
             PictureBox picture = new PictureBox
             {
                 Name = nazwa,
@@ -124,10 +158,12 @@ namespace WykrywaczZnakow
             List<RotatedRect> boxList = new List<RotatedRect>();
 
             zwiekszProgressBar(1);
-
+			
+			//przetworzenie zdjecia do postaci wskazujacej tylko biale kontury na czarnym tle
             Image<Gray, byte> canny_zdj = new Image<Gray, byte>(imgInput.Width, imgInput.Height, new Gray(0));
             canny_zdj = imgInput.Canny(300, 250);
 
+			//przypisanie canny_zdj do pictureBox i rozciagniecie
             zdjecieCannyBox.Image = canny_zdj.Bitmap;
             zdjecieCannyBox.SizeMode = PictureBoxSizeMode.StretchImage;
             zwiekszProgressBar(2);
@@ -145,9 +181,12 @@ namespace WykrywaczZnakow
             Mat hier = new Mat();
 
             zwiekszProgressBar(1);
-
+			
+			//wygladzenie obrazu
             imgSmooth = imgInput.PyrDown().PyrUp();
             imgSmooth._SmoothGaussian(3);
+			
+			//ograniczenie wykrywanych figur do odpowiedniego zakresu ze skali RGB - zoltego
             imgOut = imgSmooth.InRange(new Bgr(0, 140, 150), new Bgr(80, 255, 255));
             imgOut = imgOut.PyrDown().PyrUp();
             imgOut._SmoothGaussian(3);
@@ -155,20 +194,29 @@ namespace WykrywaczZnakow
             zwiekszProgressBar(2);
 
             Dictionary<int, double> dict = new Dictionary<int, double>();
+			
+			//wyszukanie konturow spelniajacych wymogi odnosnie mi.in. koloru 
             CvInvoke.FindContours(imgOut, contours, null, Emgu.CV.CvEnum.RetrType.List, Emgu.CV.CvEnum.ChainApproxMethod.ChainApproxSimple);
             label1.Text = contours.Size.ToString();
+			
+			//jesli odnaleziono chocby jeden kontur
             if (contours.Size > 0)
             {
+				//petla przechodzaca po wszystkich wykrytych konturach
                 for (int i = 0; i < contours.Size; i++)
                 {
                     using (VectorOfPoint contour = contours[i])
                     using (VectorOfPoint approxContour = new VectorOfPoint())
                     {
                         CvInvoke.ApproxPolyDP(contour, approxContour, CvInvoke.ArcLength(contour, true) * 0.05, true);
+						
+						//filtr wielkosci pola wykrytego konturu
                         if (CvInvoke.ContourArea(approxContour, false) > 50) 
                         {
+							//jesli to trójkąt
                             if (approxContour.Size == 3)
                             {
+								//tablica punktow i dodanie ich do tablicy trojkatow
                                 Point[] pts = approxContour.ToArray();
                                 triangleList.Add(new Triangle2DF(
                                    pts[0],
@@ -176,23 +224,33 @@ namespace WykrywaczZnakow
                                    pts[2]
                                    ));
 
+								//sprawdzenie czy wykryty trojkat jest figura obróconą jednym z wierzcholkow do dolu
                                 if (pts[1].X > pts[0].X && pts[1].Y > pts[0].Y)
                                 {
+									//ustawienie znaku A-7
                                     ustawWykrytyZnak(2);
                                     double area = CvInvoke.ContourArea(contours[i]);
+									//dodanie do tablicy glownej
                                     dict.Add(i, area);
                                 }
                             }
+							
+							//jesli to czworokat
                             else if (approxContour.Size == 4)
                             {
                                 bool isRectangle = true;
+								
+								///rozbicie figury na pojedyncze krawedzie
                                 Point[] pts = approxContour.ToArray();
                                 LineSegment2D[] edges = PointCollection.PolyLine(pts, true);
 
+								//petla przechodzaca po wszystkich krawedziach
                                 for (int j = 0; j < edges.Length; j++)
                                 {
+									//sprawdzenie wielkosci kąta miedzy sprawdzanymi krawedziami
                                     double angle = Math.Abs(
                                        edges[(j + 1) % edges.Length].GetExteriorAngleDegree(edges[j]));
+									//przerwanie jesli kąty w figurze są mniejsze niż 80 i wieksze niż 100
                                     if (angle < 80 || angle > 100)
                                     {
                                         isRectangle = false;
@@ -202,6 +260,9 @@ namespace WykrywaczZnakow
                                 if (isRectangle)
                                 {
                                     RotatedRect rrect = CvInvoke.MinAreaRect(contours[i]);
+									
+									//ostateczne sprawdzenie czy wykryta figura jest obrocona wzgledem srodka o wartosc od 40 do 50
+										//stopni - znak D-1 jest obroconym kwadratem o 45 st wzgledem srodka	
                                     if ((rrect.Angle < -40 && rrect.Angle > -50)|| (rrect.Angle > 40 && rrect.Angle < 50))
                                     {
                                         boxList.Add(CvInvoke.MinAreaRect(approxContour));
@@ -224,7 +285,10 @@ namespace WykrywaczZnakow
             {
                 int key = int.Parse(it.Key.ToString());
 
+				//pobranie odpowiednich konturow
                 Rectangle rect = CvInvoke.BoundingRectangle(contours[key]);
+				
+				//narysowanie czerwonego prostokata wokol wykrytego znaku
                 CvInvoke.Rectangle(imgInput, rect, new MCvScalar(0, 0, 255), 1);
             }
 
@@ -232,6 +296,7 @@ namespace WykrywaczZnakow
             pictureBox2.Image = imgInput.Bitmap;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 
+			//utworzenie zdjecia wskazujacego WSZYSTKIE kontury w poczatkowym zdjeciu - czerowne linie
             Image<Bgr, Byte> lineImage = imgInput.CopyBlank();
             foreach (LineSegment2D line in lines)
             lineImage.Draw(line, new Bgr(Color.Red), 1);
@@ -266,6 +331,9 @@ namespace WykrywaczZnakow
 
         }
 
+		/*
+		Funkcja wczytujaca zdjecie z podanej lokalizacji
+		*/
         private void btn_wczytajZdjecie_Click(object sender, EventArgs e)
         {
             wyczysc_program();
@@ -279,6 +347,9 @@ namespace WykrywaczZnakow
             zdjecieGlowneBox.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
+		/*
+		Funkcja wyswietlajaca wszystkie wykryte znaki
+		*/
         public void wyswietlWykryteZnaki()
         {
             label1.Text = "Wykryto znaki: ";
@@ -290,6 +361,8 @@ namespace WykrywaczZnakow
                 spacja = ", ";
 
             int licznik = 0;
+			
+			//petla po wszystkich wykrytych znakach i wsyswietlenie ich
             foreach (PictureBox znak in wykryteZnaki)
             {
                 licznik++;
