@@ -49,7 +49,7 @@
             this.zdjecieGlowneBox.Size = new System.Drawing.Size(450, 320);
             this.zdjecieGlowneBox.TabIndex = 1;
             this.zdjecieGlowneBox.TabStop = false;
-            this.zdjecieGlowneBox.Click += new System.EventHandler(this.zdjecieGlowneBox_Click);
+            this.zdjecieGlowneBox.Click += new System.EventHandler(this.ZdjecieGlowneBox_Click);
             // 
             // zdjecieCannyBox
             // 
@@ -58,7 +58,7 @@
             this.zdjecieCannyBox.Size = new System.Drawing.Size(250, 150);
             this.zdjecieCannyBox.TabIndex = 2;
             this.zdjecieCannyBox.TabStop = false;
-            this.zdjecieCannyBox.Click += new System.EventHandler(this.zdjecieCannyBox_Click);
+            this.zdjecieCannyBox.Click += new System.EventHandler(this.ZdjecieCannyBox_Click);
             // 
             // pictureBox2
             // 
@@ -78,7 +78,7 @@
             this.btn_wczytajZdjecie.TabIndex = 5;
             this.btn_wczytajZdjecie.Text = "Otwórz";
             this.btn_wczytajZdjecie.UseVisualStyleBackColor = true;
-            this.btn_wczytajZdjecie.Click += new System.EventHandler(this.btn_wczytajZdjecie_Click);
+            this.btn_wczytajZdjecie.Click += new System.EventHandler(this.Btn_wczytajZdjecie_Click);
             // 
             // btn_wykryjZnaki
             // 
@@ -90,7 +90,7 @@
             this.btn_wykryjZnaki.TabIndex = 6;
             this.btn_wykryjZnaki.Text = "Rozpocznij";
             this.btn_wykryjZnaki.UseVisualStyleBackColor = true;
-            this.btn_wykryjZnaki.Click += new System.EventHandler(this.btn_wykryjZnaki_Click);
+            this.btn_wykryjZnaki.Click += new System.EventHandler(this.Btn_wykryjZnaki_Click);
             // 
             // progressBar2
             // 
@@ -98,7 +98,7 @@
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(1212, 23);
             this.progressBar2.TabIndex = 8;
-            this.progressBar2.Click += new System.EventHandler(this.progressBar2_Click);
+            this.progressBar2.Click += new System.EventHandler(this.ProgressBar2_Click);
             // 
             // zdjecieWykrytyZnak
             // 
@@ -118,7 +118,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 34);
             this.label1.TabIndex = 10;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // Form1
             // 
